@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'SF';
+    src: url('./fonts/sf-ui-display-thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avantgard';
+    src: url('./fonts/avantgardegothicc-bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
