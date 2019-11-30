@@ -81,11 +81,46 @@ $blackColor: #020304;
   0%{
     top: -90px;
   }
-  50%{
-    top: -10px;
-  }
   100%{
     top: 0; 
+  }
+}
+@keyframes header-items {
+  0%{
+    margin-top: -110px;
+  }
+  100%{
+     margin-top: 0px;
+  }
+}
+@keyframes welcome-title{
+  0%{
+    opacity: 0;
+    margin-left: -100%;
+  }
+  100%{
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes welcome-subtitle{
+  0%{
+    top: 150%;
+    opacity: 0;
+  }
+  100%{
+    top: 57.7%;
+    opacity: 1;
+  }
+}
+@keyframes welcome-button{
+  0%{
+    top: 150%;
+    opacity: 0;
+  }
+  100%{
+    top: 67%;
+    opacity: 1;
   }
 }
 
@@ -101,14 +136,16 @@ $blackColor: #020304;
     background: black; 
     color: white; 
     border: solid black; 
-    animation: header-animation 1s ease-in-out forwards; 
+    animation: header-animation 1s  ease-out forwards; 
   }
   .header_left{
     width: 50%;
     display: flex; 
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     z-index: 3;
+    margin-top: -110px;
+    animation: header-items 1s ease-out forwards;
   }
   .header_item{
     margin-right: 35px;
@@ -127,9 +164,11 @@ $blackColor: #020304;
     width: 50%; 
     display: flex; 
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-right: 10%;
-    z-index: 2
+    z-index: 2;
+    margin-top: -110px;
+    animation: header-items 1s ease-out forwards;
   }
 
   // THE BURGER STYLING 
@@ -324,6 +363,7 @@ $blackColor: #020304;
   flex-direction: column;
   justify-content: center;
   align-content: center; 
+  overflow: hidden;
 }
 .welcome__text{
   text-align: center; 
@@ -333,14 +373,31 @@ $blackColor: #020304;
 }
 .welcome__title{
   font-size: 80px;
+  margin-left: -10400px;
+  opacity: 0;
+  animation: welcome-title 1s ease-out forwards;
+  line-height: 1.1;
+  margin-bottom: 138px;
 }
 .welcome__subtitle{
   font-size: 22px;
+  font-weight: 300; 
+  position: absolute; 
+  margin: auto;
+  left: 0; 
+  right: 0; 
+  top: -150%;
+  animation: welcome-subtitle 1s ease-in-out forwards;
 }
 .welcome__wrapper{
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  position: absolute; 
+  margin: auto;
+  left: 0; 
+  right: 0; 
+  top: 150%;
+  animation: welcome-button 1.1s ease-in-out forwards;
 }
 .welcome__button{
   width: 200px;
