@@ -33,7 +33,11 @@
         </div>
       </div>
       <div class="welcome">
-
+        <p class="welcome__text welcome__title">Genesis Development —<br>ДНК вашого бізнесу</p>
+        <p class="welcome__text welcome__subtitle">Створюємо унікальне web-обличчя для вашого проекту</p>
+        <div class="welcome__wrapper">
+        <button class="welcome__text welcome__button">Отримати консультацію</button>
+        </div>
       </div>
 
   </div>
@@ -65,29 +69,39 @@ $blackColor: #020304;
   padding: 0; 
   box-sizing: border-box;
 }
-body{
-  margin: 0; 
-  padding: 0; 
+// #app {
+//   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+// }
+
+@keyframes header-animation {
+  0%{
+    top: -90px;
+  }
+  50%{
+    top: -10px;
+  }
+  100%{
+    top: 0; 
+  }
 }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+
 
 /* STYLES FOR HEADER  */
 
   .header{
     position: fixed; 
-    top: 0; 
+    top: -90px; 
     width: 100vw;
     height: 90px;  
     display: flex;
     background: black; 
     color: white; 
     border: solid black; 
+    animation: header-animation 1s ease-in-out forwards; 
   }
   .header_left{
     width: 50%;
@@ -117,13 +131,127 @@ body{
     padding-right: 10%;
     z-index: 2
   }
-  #burger{
-    visibility: hidden;
-    display: none;
-  }
-  .label{
-    display: none;
-  }
+
+  // THE BURGER STYLING 
+
+      #burger{
+        visibility: hidden;
+        display: none;
+      }
+      .label{
+        display: none;
+      }
+      body {
+      background-color: #ed5050;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      h1 {
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        z-index: 0;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        > span {
+          text-transform: none;
+          opacity: .5;
+          font-weight: 300;
+          font-size: 12px;
+        }
+      }
+        input + label {
+          position: fixed;
+          top: 35px;
+          right: 40px;
+          height: 20px;
+          width: 15px; 
+          z-index: 2;
+          span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            margin-top: -1px;
+            left: 0;
+            display: block;
+            background: white;
+            transition: .5s;
+          }
+          span:first-child {
+            top: 3px; 
+          }
+          span:last-child {
+            top: 16px; 
+          }      
+        }
+        label:hover {
+          cursor: pointer;
+        }
+        input:checked + label { 
+          span {
+            opacity: 0;
+            top: 50%;
+          }
+          span:first-child {
+            opacity: 1;
+            transform: rotate(405deg);
+          }
+          span:last-child {
+            opacity: 1;
+            transform: rotate(-405deg);
+          }
+        }
+        input ~ nav {
+          background: black;
+          position: fixed;
+          top: 0px;
+          left: 0;
+          width: 100%;
+          height: 0px;
+          z-index: 1;
+          transition: .5s;
+          transition-delay: .5s;
+          overflow: hidden;
+          > ul {
+            text-align: center;
+            position: absolute;
+            top: 35%;
+            left: 20%;
+            right: 20%;
+            > li {
+              opacity: 0;
+              transition: .5s;
+              transition-delay: 0s;
+              list-style-type: none;
+              > a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                font-family: 'Avantgard', Arial, Helvetica, sans-serif; 
+                font-size: 17px; 
+                font-weight: 700;
+                font-weight: 700;
+                display: block;
+                padding: 30px;
+              }
+            }
+          }
+        }
+        input:checked ~ nav { 
+          height: 100%;
+          transition-delay: 0s;
+          > ul {
+            > li {
+              opacity: 1;
+              transition-delay: .5s;
+            }
+          }
+        }
+    }
+
+  // END OF THE BURGER STYLING 
 
   /* header media requirements    */
 
@@ -187,115 +315,42 @@ body{
         }
       } */
 
-
-body {
-  background: red; 
-  h1 {
-    position: fixed;
-    top: 40px;
-    left: 40px;
-    z-index: 0;
-    font-size: 20px;
-    font-weight: 900;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    > span {
-      text-transform: none;
-      opacity: .5;
-      font-weight: 300;
-      font-size: 12px;
-    }
-  }
-    input + label {
-      position: fixed;
-      top: 35px;
-      right: 40px;
-      height: 20px;
-      width: 15px; 
-      z-index: 2;
-      span {
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        top: 50%;
-        margin-top: -1px;
-        left: 0;
-        display: block;
-        background: white;
-        transition: .5s;
-      }
-      span:first-child {
-        top: 3px; 
-      }
-      span:last-child {
-        top: 16px; 
-      }      
-    }
-    label:hover {
-      cursor: pointer;
-    }
-    input:checked + label { 
-      span {
-        opacity: 0;
-        top: 50%;
-      }
-      span:first-child {
-        opacity: 1;
-        transform: rotate(405deg);
-      }
-      span:last-child {
-        opacity: 1;
-        transform: rotate(-405deg);
-      }
-    }
-    input ~ nav {
-      background: black;
-      position: fixed;
-      top: 0px;
-      left: 0;
-      width: 100%;
-      height: 0px;
-      z-index: 1;
-      transition: .5s;
-      transition-delay: .5s;
-      overflow: hidden;
-      > ul {
-        text-align: center;
-        position: absolute;
-        top: 35%;
-        left: 20%;
-        right: 20%;
-        > li {
-          opacity: 0;
-          transition: .5s;
-          transition-delay: 0s;
-          list-style-type: none;
-          > a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: white;
-            font-family: 'Avantgard', Arial, Helvetica, sans-serif; 
-            font-size: 17px; 
-            font-weight: 700;
-            font-weight: 700;
-            display: block;
-            padding: 30px;
-          }
-        }
-      }
-    }
-    input:checked ~ nav { 
-      height: 100%;
-      transition-delay: 0s;
-      > ul {
-        > li {
-          opacity: 1;
-          transition-delay: .5s;
-        }
-      }
-    }
-}
-
 /*END OF STYLES FOR HEADER  */
+
+.welcome{
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; 
+}
+.welcome__text{
+  text-align: center; 
+  font-family: 'Avantgard', Arial, Helvetica, sans-serif; 
+  color: white; 
+  margin: 20px 0; 
+}
+.welcome__title{
+  font-size: 80px;
+}
+.welcome__subtitle{
+  font-size: 22px;
+}
+.welcome__wrapper{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.welcome__button{
+  width: 200px;
+  height: 44px;
+  width: 320px;
+  height: 54px;
+  background: black; 
+  border: 1px solid transparent; 
+  border-radius: 30px;
+  line-height: 1.55;
+}
 
 </style>
