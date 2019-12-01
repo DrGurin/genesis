@@ -117,6 +117,64 @@
 
 <!-- THE END OF FOURTH BLOCK WITH ALL STEPS THAT PROVIDE GENESIS COMPANY  -->
 
+<!-- FIVTH BLOCK WITH INPUTS  -->
+
+  <div class="block-input">
+    <h2 class="block-input-title">З'явилися запитання? Залиште заявку і ми оперативно вас проконсультуємо.</h2>
+    <div class="inputContainer" v-if="!isData"> 
+      <input type="text" class="field input-field" placeholder="Ім’я:" v-model="name">
+      <input type="number" class="field input-field" placeholder="Телефон:" v-model.number="phone">
+      <button class="field button-field anim" @click="sendData()">Хочу консультацію</button>
+    </div>
+    <button v-if="isData" class="isDataButton">Дякуємо! Дані успішно відправлені!</button>
+    <button v-if="noData" class="noDataButton">Заповніть усі поля</button>
+  </div>
+
+<!-- THE END OF FIVTH BLOCK WITH INPUTS  -->
+
+
+<!-- FOOTER  -->
+
+  <div class="footer">
+          <div class="leftSide">
+            <div class="leftSide-Container">
+              <h3 class="contacts">Контакти</h3>
+              <a href="mailto:contact@genesisdevelop.com" class="email">contact@genesisdevelop.com</a>
+              <p class="adresText city">Україна, місто Вінниця</p>
+              <p class="adresText street">вулиця Магістратська, 156А</p>
+              <div class="icons">
+                <div class="facebook-icon icon">
+                  <a href="#" target="blanc">
+                    <svg x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                      <path style="fill:#780000;" d="M47.761,24c0,13.121-10.638,23.76-23.758,23.76C10.877,47.76,0.239,37.121,0.239,24c0-13.124,10.638-23.76,23.764-23.76C37.123,0.24,47.761,10.876,47.761,24 M20.033,38.85H26.2V24.01h4.163l0.539-5.242H26.2v-3.083c0-1.156,0.769-1.427,1.308-1.427h3.318V9.168L26.258,9.15c-5.072,0-6.225,3.796-6.225,6.224v3.394H17.1v5.242h2.933V38.85z"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="twitter-icon icon">
+                  <a href="#" target="blanc">
+                    <svg x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                      <path style="fill:#780000;" d="M47.762,24c0,13.121-10.639,23.76-23.761,23.76S0.24,37.121,0.24,24c0-13.124,10.639-23.76,23.761-23.76  S47.762,10.876,47.762,24 M38.031,12.375c-1.177,0.7-2.481,1.208-3.87,1.481c-1.11-1.186-2.694-1.926-4.455-1.926  c-3.364,0-6.093,2.729-6.093,6.095c0,0.478,0.054,0.941,0.156,1.388c-5.063-0.255-9.554-2.68-12.559-6.367  c-0.524,0.898-0.825,1.947-0.825,3.064c0,2.113,1.076,3.978,2.711,5.07c-0.998-0.031-1.939-0.306-2.761-0.762v0.077  c0,2.951,2.1,5.414,4.889,5.975c-0.512,0.14-1.05,0.215-1.606,0.215c-0.393,0-0.775-0.039-1.146-0.109  c0.777,2.42,3.026,4.182,5.692,4.232c-2.086,1.634-4.712,2.607-7.567,2.607c-0.492,0-0.977-0.027-1.453-0.084  c2.696,1.729,5.899,2.736,9.34,2.736c11.209,0,17.337-9.283,17.337-17.337c0-0.263-0.004-0.527-0.017-0.789  c1.19-0.858,2.224-1.932,3.039-3.152c-1.091,0.485-2.266,0.811-3.498,0.958C36.609,14.994,37.576,13.8,38.031,12.375"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="instagram-icon icon">
+                  <a href="#" target="blanc">
+                    <svg width="30px" height="30px" viewBox="0 0 30 30" xml:space="preserve">
+                      <path style="fill:#780000;" d="M15,11.014 C12.801,11.014 11.015,12.797 11.015,15 C11.015,17.202 12.802,18.987 15,18.987 C17.199,18.987 18.987,17.202 18.987,15 C18.987,12.797 17.199,11.014 15,11.014 L15,11.014 Z M15,17.606 C13.556,17.606 12.393,16.439 12.393,15 C12.393,13.561 13.556,12.394 15,12.394 C16.429,12.394 17.607,13.561 17.607,15 C17.607,16.439 16.444,17.606 15,17.606 L15,17.606 Z"></path>
+                      <path style="fill:#780000;" d="M19.385,9.556 C18.872,9.556 18.465,9.964 18.465,10.477 C18.465,10.989 18.872,11.396 19.385,11.396 C19.898,11.396 20.306,10.989 20.306,10.477 C20.306,9.964 19.897,9.556 19.385,9.556 L19.385,9.556 Z"></path>
+                      <path style="fill:#780000;" d="M15.002,0.15 C6.798,0.15 0.149,6.797 0.149,15 C0.149,23.201 6.798,29.85 15.002,29.85 C23.201,29.85 29.852,23.202 29.852,15 C29.852,6.797 23.201,0.15 15.002,0.15 L15.002,0.15 Z M22.666,18.265 C22.666,20.688 20.687,22.666 18.25,22.666 L11.75,22.666 C9.312,22.666 7.333,20.687 7.333,18.28 L7.333,11.734 C7.333,9.312 9.311,7.334 11.75,7.334 L18.25,7.334 C20.688,7.334 22.666,9.312 22.666,11.734 L22.666,18.265 L22.666,18.265 Z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map">
+              <img src="./assets/images/maps.png" alt="map" class="map-image">
+          </div>
+      </div>
+
+<!-- THE END OF FOOTER  -->
 
 
   </div>
@@ -137,6 +195,10 @@ export default {
   name: 'app',
   data(){
     return{
+      name: '',
+      phone: '',
+      isData: false,
+      noData: false,
       isTabActive: false,
       goods: [
           {
@@ -181,6 +243,14 @@ export default {
   methods:{
     changeTab(){
       this.isTabActive = !this.isTabActive;
+    },
+    sendData() {
+      if(this.name.trim().length == 0 || this.phone.length == 0 ) {
+        this.noData = true
+      } else {
+        this.noData = false
+        this.isData = true
+      }
     }
   }
 }
@@ -1066,5 +1136,298 @@ body{
     // media requirements of third block 
 
 // THE END OF STYLES FOR FOURTH BLOCK 
+
+// STYLING FIVTH BLOCK WITH INPUTS !!!  
+
+    .block-input {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 120px;
+      text-align: center;
+    }
+    .block-input-title {
+      color: #fff;
+      font-family: 'Avantgard', Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      line-height: 47px;
+      font-weight: 600;
+      max-width: 1200px;
+      width: 80%;
+      margin-bottom: 120px;
+    }
+    .inputContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 1095px;
+      margin-bottom: 20px;
+    }
+    .noDataButton {
+      background-color: #F95D51;
+      width: 80%;
+      max-width: 1095px;
+      height: 70px;
+      border: none;
+      color: #fff;
+      font-family: 'SF', Arial, Helvetica, sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .isDataButton {
+      background-color: #62C584;
+      width: 80%;
+      max-width: 1095px;
+      height: 70px;
+      border: none;
+      color: #fff;
+      font-family: 'SF', Arial, Helvetica, sans-serif;
+      font-size: 26px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    input #editing-view-port>>>#spin {
+      display: none !important;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .field {
+      width: 32%;
+      max-width: 344px;
+      height: 60px;
+      border: solid 1px black;
+    }
+    .input-field {
+      background-color: white;
+      font-family: 'SF', Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      padding-left: 20px;
+    }
+    .button-field {
+      background-color: black;
+      color: white;
+      font-family: 'Avantgard', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+    }
+    .anim {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      overflow: hidden;
+      -webkit-transition: ease 0.3s;
+      transition: ease 0.3s;
+    }
+    .anim::before {
+      position: absolute;
+        bottom: -350%;
+      left: -35%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 0;
+      height: 0;
+      // border: solid 1px white;
+      box-shadow: 0 0 10px rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s;
+      -webkit-animation-name: circle;
+      animation-name: circle;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes circle {
+        0% {
+            opacity: .5;
+        background: rgba(255,255,255,.2);
+        }
+        20% {
+            opacity: 1;
+        background: rgba(255,255,255,.5);
+      }
+      40% {
+        opacity: 0.2;
+      }
+      60% {
+        opacity: 0;
+        width: 480%;
+            height: 600%;
+      }
+        100% {
+            width: 480%;
+            height: 600%;
+            opacity: 0;
+        }
+    }
+    @media (max-width: 968px){
+      .block-input-title{
+        font-size: 35px;
+      }
+    }
+    @media (max-width: 430px){
+      .block-input-title{
+        font-size: 28px;
+      }
+    }
+    @media (max-width: 340px){
+      .block-input-title{
+        font-size: 20px;
+      }
+    }
+// THE END OF STYLING FIVTH BLOCK WITH INPUTS !!!  
+
+// STYLING OF FOOTER 
+
+     #app .footer {
+    display: flex;
+    height: 100%;
+    max-height: 775px;
+    width: 100%;
+    background-color: #ed5050;
+    position: relative;
+    padding-bottom: 0px;
+  }
+  /* leftside */
+  .leftSide {
+    display: flex;
+    width: 50%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .leftSide-Container {
+    display: flex;
+    flex-direction: column;
+    margin: 20%;
+    height: 60%;
+    width: 60%;
+    text-align: left;
+  }
+  .contacts {
+    font-family: 'Avantgard', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 45px;
+  }
+  .email {
+    color: rgb(122, 0, 0);
+    text-decoration: none;
+    font-family: 'Avantgard', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+  .email:active {
+    color: rgb(122, 0, 0);
+    text-decoration: none;
+  } 
+  .adresText {
+    color: #fff;
+    font-family: 'Avantgard', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+  .city {
+    margin-bottom: 34px;
+  }
+  .street {
+    margin-bottom: 45px;
+  }
+  .icons {
+    margin-top: 45px;
+    display: flex;
+    justify-content: start;
+  }
+  .icon {
+    margin-right: 3px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .leftSide-Container {
+      width: 100%;
+      margin-left: 10%;
+      height: 60%;
+    }
+    .email {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .contacts {
+      margin-bottom: 20px;
+    }
+    .city {
+      margin-bottom: 20px;
+    }
+    .street {
+      margin-bottom: 20px;
+    }
+  }
+  /* map */
+  .map {
+    width: 50%;
+    height: 100%;
+    display: flex;
+  }
+  .map-image {
+    // background-image: url('./assets/images/maps.png');
+    // background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 1030px) {
+  #app .footer {
+    flex-direction: column;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .leftSide-Container {
+    height: 70%;
+  }
+  .icons {
+    margin-top: 0px;
+  }
+  .map {
+    width: 100%;
+  }
+  .map-image {
+    background-position-y:center;
+  }
+  .inputContainer {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 240px;
+  }
+  .field {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+// THE END STYLING OF FOOTER 
+
 
 </style>
